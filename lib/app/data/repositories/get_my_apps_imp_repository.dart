@@ -3,8 +3,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../domain/repositories/get_my_apps_repository.dart';
 import '../datasources/get_my_apps_datasource.dart';
-import 'package:flut_micro_commons_shared/flut_micro_commons_shared.dart';
-import 'package:flut_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
+import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
+import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 
 final $GetMyAppsImpRepository = Bind.lazySingleton(
   (i) => GetMyAppsImpRepository(i.get()),

@@ -3,7 +3,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'get_my_apps_usecase.dart';
 import '../repositories/get_my_apps_repository.dart';
-import 'package:flut_micro_commons_shared/flut_micro_commons_shared.dart';
+import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
 
 final $GetMyAppsImpUsecase = Bind.lazySingleton(
   (i) => GetMyAppsImpUsecase(i.get()),

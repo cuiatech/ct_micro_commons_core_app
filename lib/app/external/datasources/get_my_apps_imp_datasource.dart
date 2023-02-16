@@ -1,8 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flut_micro_commons_client_https/flut_micro_commons_client_https.dart';
-import 'package:flut_micro_commons_dependencies/flut_micro_commons_dependencies.dart';
+import 'package:ct_micro_commons_client_https/ct_micro_commons_client_https.dart';
+import 'package:ct_micro_commons_dependencies/ct_micro_commons_dependencies.dart';
 import '../../data/datasources/get_my_apps_datasource.dart';
 
 final $GetMyAppsImpDatasource = Bind.lazySingleton(
