@@ -17,6 +17,11 @@ class GetMyAppsImpUsecase implements GetMyAppsUsecase {
 
   @override
   Future<CuiaResponse> call() async {
-    return await _getMyAppsRepository();
+    try {
+      var res = await _getMyAppsRepository();
+      return CuiaResponse(success: true, data: res);
+    } catch (e) {
+      return CuiaResponse(success: false, message: e.toString());
+    }
   }
 }

@@ -3,7 +3,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../domain/repositories/get_my_apps_repository.dart';
 import '../datasources/get_my_apps_datasource.dart';
-import 'package:ct_micro_commons_shared/ct_micro_commons_shared.dart';
 import 'package:ct_micro_commons_shared/shared/domain/models/dto/app_dto.dart';
 
 final $GetMyAppsImpRepository = Bind.lazySingleton(
@@ -17,7 +16,7 @@ class GetMyAppsImpRepository implements GetMyAppsRepository {
   GetMyAppsImpRepository(this._getMyAppsDatasource);
 
   @override
-  Future<CuiaResponse> call() async {
+  Future<List<AppDto>> call() async {
     try {
       var res = await _getMyAppsDatasource();
       List<AppDto> list = <AppDto>[];
@@ -26,12 +25,9 @@ class GetMyAppsImpRepository implements GetMyAppsRepository {
         list.add(AppDto.fromJson(e['app']));
       });
 
-      return CuiaResponse(
-        success: res['success'],
-        data: list,
-      );
+      return list;
     } catch (e) {
-      return CuiaResponse(success: false, message: e.toString());
+      rethrow;
     }
   }
 }

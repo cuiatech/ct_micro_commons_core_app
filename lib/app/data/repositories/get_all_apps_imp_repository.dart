@@ -21,9 +21,10 @@ class GetAllAppsImpRepository implements GetAllAppsRepository {
       List<AppDto> list = <AppDto>[];
       var res = await _getAllAppsDatasource();
 
-      res['data'].forEach((e) {
-        list.add(AppDto.fromJson(e['app']));
-      });
+      (res['data'] as List).map((e) {
+        list.add(AppDto.fromJson(e));
+      }).toList();
+
       return list;
     } catch (e) {
       rethrow;

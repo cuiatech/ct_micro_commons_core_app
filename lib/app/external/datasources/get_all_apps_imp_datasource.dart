@@ -16,6 +16,6 @@ class GetAllAppsImpDatasource implements GetAllAppsDatasource {
   @override
   Future<Map<String, dynamic>> call() async {
     var res = await _clientHttps.get('/api/apps/all');
-    return res.data;
+    return Map.from(res.data);
   }
 }
