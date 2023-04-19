@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:ct_micro_commons_shared/shared/components/response/cuia_response.dart';
 
 abstract class GetAllAppsUsecase {

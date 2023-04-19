@@ -1,5 +1,4 @@
 // import 'package:flutter/material.dart';
-// ignore_for_file: depend_on_referenced_packages
 
 import 'package:ct_micro_commons_core_app/app/data/repositories/app_checkout_imp_repository.dart';
 import 'package:ct_micro_commons_core_app/app/data/repositories/get_all_apps_imp_repository.dart';

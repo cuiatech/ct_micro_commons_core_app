@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../domain/repositories/get_cart_list_repository.dart';
 import '../datasources/get_cart_list_datasource.dart';

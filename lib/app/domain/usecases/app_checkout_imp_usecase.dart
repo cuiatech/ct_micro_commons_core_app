@@ -1,5 +1,3 @@
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter_modular/flutter_modular.dart';
 import 'app_checkout_usecase.dart';
 import '../repositories/app_checkout_repository.dart';
